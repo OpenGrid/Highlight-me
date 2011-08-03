@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.xdomainajax.js"></script>
+<script src="highlightme.js"></script>
+<meta charset=utf-8 />
+<title>Highlight-me</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+<script>
+    $(document).ready(function(){
+        $("#code").highlightme();
+    });
+</script>
+</head>
+<body>
+    <p id="code">print &#39;hello world!&#39;</p>
+</body>
+
+</html>
