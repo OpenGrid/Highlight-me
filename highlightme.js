@@ -1,18 +1,10 @@
-(function( $ ){
-
-  $.fn.highlightme = function(options) {
-  
+(function( $ ){    
+  $.fn.highlightme = function(options) {    
     return this.each(function() {
         var t = $(this);
-        var data = {
-            code:t.text(), 
-            lexer:'js', 
-            style:"colorful", 
-            linenos:1, 
-            divstyles:"color:black;background:white;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"
-        };
-        $.post("http://www.hilite.me/api", data, function(r, status){
-            t.html(r);
+        options.code = t.text();        
+        $.get("http://www.hilite.me/api", options, function(r, status){           
+            t.html(r.responseText);
             console.log("Status: " + status);
         }, 'html');
     });
