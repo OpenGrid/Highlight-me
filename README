@@ -1,2 +1,3 @@
 Usage:
-$(selector).higlightme();
+var options = {}
+$(selector).higlightme(options);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -9,23 +9,17 @@
 <!--[if IE]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
-</style>
+
 <script>
     $(document).ready(function(){
-        $("#code").highlightme({
-            lexer:'js', 
-            style:"colorful", 
-            linenos:1, 
-            divstyles:"color:black;background:white;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"
-        });
+        $("#code").highlightme();
     });
 </script>
 </head>
 <body>
-    <p id="code">print &#39;hello world!&#39;</p>
+<div id="code">
+var options = {}; 
+$(selector).higlightme(options);
+</div>
 </body>
-
 </html>
