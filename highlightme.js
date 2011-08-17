@@ -32,6 +32,9 @@
         divstyles:"color:black;background:white;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"
     };   
     
+    // Comment added in Cloud9 IDE
+    
+    
     return this.each(function() {
         var $code = $(this);        
         options = $.extend(settings, options);
@@ -40,7 +43,7 @@
             var node = $("<div/>");            
             node.append(r.responseText);            
             $code.html(node.find("div"));            
-        });
+        });        
     });
   };
 })( jQuery );
